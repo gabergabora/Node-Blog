@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const maxAge = 60*60*24
 const createToken = (id) =>{
     return jwt.sign({id},'nodeblog',{expiresIn:maxAge})
-} ;
+} ;                 
 
 const login_get = (req,res)=>{
     res.render('login',{title:"Login Page"})
